@@ -14,15 +14,12 @@ from models.models import Base, State, UserData
 
 class SQLiteStorage(BaseStorage):
 
-    def __init__(self):
+    def __init__(self, db_path):
         # Создаем экземпляр механизма (engine) базы данных SQLite
         self.engine = create_async_engine(
-            'sqlite+aiosqlite:///db.sqlite',
+            f'sqlite+aiosqlite:///{db_path}',
             # echo=True  # echo=True позволяет видеть SQL запросы в консоли
         )
-
-        # # Создаем таблицу в базе данных
-        # Base.metadata.create_all(engine)
 
         self.session = sessionmaker(bind=self.engine, class_=AsyncSession)
 

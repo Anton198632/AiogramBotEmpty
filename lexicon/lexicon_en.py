@@ -1,5 +1,5 @@
 from constants.constants import COMMAND_START, COMMAND_HELP, COMMAND_FILL_FORM, TEXT_ERROR_INPUT_NAME, TEXT_INPUT_AGE, \
-    TEXT_FORM_FILLED_OUT, TEXT_ERROR_INPUT_AGE, BUTTONS_TEXT_GENDERS, MALE, FEMALE
+    TEXT_FORM_FILLED_OUT, TEXT_ERROR_INPUT_AGE, MALE, FEMALE, TEXT_SELECT_GENDER, BUTTONS_GENDERS
 
 LEXICON_EN: dict[str, str] = {
     COMMAND_START: "I am an echo bot.",
@@ -17,9 +17,11 @@ LEXICON_EN: dict[str, str] = {
                           'Try again \n\If you want to interrupt '
                           'filling out the questionnaire - send the /start command',
 
+    TEXT_SELECT_GENDER: 'Thanks!\n\specify your gender',
+
     TEXT_FORM_FILLED_OUT: 'Thank you for filling out the questionnaire!',
 
-    BUTTONS_TEXT_GENDERS: {
+    BUTTONS_GENDERS: {
         MALE: 'male',
         FEMALE: 'female'
     }

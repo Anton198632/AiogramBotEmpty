@@ -38,7 +38,7 @@ async def start_bot() -> None:
     # # Инициализируем хранилище (создаем экземпляр класса RedisStorage)
     # storage = RedisStorage(redis=redis)
 
-    storage = SQLiteStorage()
+    storage = SQLiteStorage(config.db.database)
     await storage.create_tables()
 
     # Инициализируем бот и диспетчер
