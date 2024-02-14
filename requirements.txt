@@ -1,0 +1,8 @@
+aiogram==3.3.0
+python-dotenv==1.0.1
+environs==10.3.0
+redis==5.0.1
+aioredis==2.0.1
+cachetools==5.3.2
+sqlalchemy==2.0.26
+aiosqlite==0.19.0
